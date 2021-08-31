@@ -29,10 +29,13 @@
         <div class="centered">
             <ul>
                 <li><img  src="resources/Google_2015_logo.svg.png" alt="Logo" ></li><br>
-                <li><input type="text"></li>
+                <li><input type="text" onresize="resizeInput()"></li><br>
+                <li >
+                    <button class="btn-search">Google Search</button>
+                    <button class="btn-search" >I'm feeling lucky</button>
+                </li>
+                
             </ul>
-            
-            
         </div>
         
 
@@ -56,5 +59,12 @@
                 </ul>
             </div>
         </footer>
+        <script>
+            function resizeInput() {
+                $(this).attr('size', $(this).val().length);
+            }
+
+            
+        </script>
     </body>
 </html>
