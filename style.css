@@ -45,17 +45,13 @@ li a {
   line-height: 30px;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1a73e8;
-  border-color: #1a73e8;
-  border-radius: 8px;
-  text-align: center;
-  padding: 9px 15px;
-  font-size: 14px;
-  margin: 8px;
-  border: 1px;
-  cursor: pointer;
+.centered {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 18px;
+  margin: 0 auto;
 }
 
 .search-bar {
@@ -77,6 +73,19 @@ li a {
 
 .search-bar-input:focus {
   outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+  border-radius: 8px;
+  text-align: center;
+  padding: 9px 15px;
+  font-size: 14px;
+  margin: 8px;
+  border: 1px;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -128,15 +137,6 @@ input[type="text"] {
   width: 400px;
   border-radius: 4px;
   padding: 5px;
-}
-
-.centered {
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 18px;
-  margin: 0 auto;
 }
 
 input[type='button']
