@@ -7,79 +7,70 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <title>Google clone</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="app.js" defer></script>
     </head>
     <body>
-        <div class="topnav ul-nav">
-            <ul>
-                <li>
-                    <a href="index.html">Gmail</a>
-                </li>
-                <li>
-                    <a href="">Images</a>
-                </li>
-                <li>
-                    <span class="material-icons nav-icon">apps</span>
-                </li>
-                <li>
-                    <button class="button btn-primary">Sign in</button>
-                </li>
-            </ul>
+        <div class="topnav ul-nav" id="topnav">
+            <span>
+                <a class='toplink' v-bind:href="homepage">Gmail</a>
+                <a class='toplink' href="">{{images}}</a>
+                <span class="material-icons navicon">apps</span>
+                <button class="button btn-primary">{{login}}</button>
+            </span>
         </div>
 
-        <div class="centered">
-            <ul>
-                <li><img  src="resources/Google_2015_logo.svg.png" alt="Logo" style="width: 70%;"></li><br>
+        <div class="centered" id='center'>
+            <div>
+                <div>
+                    <img  class='logo' v-bind:src="imgSrc" alt="Logo">
+                </div>
                 
-                <li>
-                    <div class="search-bar">
-                        <span class="material-icons">search</span>
-                        <input class="search-bar-input" type="text" onresize="resizeInput()">
-                        <span class="material-icons">keyboard_alt</span>
-                        <span class="material-icons">mic</span>
-                    </div>
-                    
-                </li><br>
-                <li >
-                    <button class="btn-search">Google Search</button>
-                    <button class="btn-search" >I'm feeling lucky</button>
-                </li><br>
-                <li>
+                <div class="search-bar">
+                    <span class="material-icons">search</span>
+                    <input class="search-bar-input" type="text" onresize="resizeInput()">
+                    <span class="material-icons">keyboard_alt</span>
+                    <span class="material-icons">mic</span>
+                </div>
+
+                <div >
+                    <button class="btn-search">{{search}}</button>
+                    <button class="btn-search" >{{lucky}}</button>
+                </div>
+                <div>
                     <span>
-                        Google offered in: 
+                        {{languages}}: 
                         <a>English</a>
                         <a>magyar</a>
                         <a>Deutsch</a>
                     </span>
-                </li>
+                </div>
                 
-            </ul>
+            </div>
         </div>
         
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div>
                 <ul>
-                    <li><a>Romania</a></li>
+                    <li><a>{{country}}</a></li>
                 </ul>
                 
                 <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Advertising</a></li>
-                    <li><a href="">Business</a></li>
-                    <li><a href="">How Search Works</a></li>
+                    <li><a v-bind:href="aboutLink">{{about}}</a></li>
+                    <li><a v-bind:href="addsLink">{{adds}}</a></li>
+                    <li><a v-bind:href="businessLink">{{business}}</a></li>
+                    <li><a v-bind:href="hswLink">{{hsw}}</a></li>
 
                     <div style="float: right;">
-                        <li><a href="">Privacy</a></li>
-                        <li><a href="">Terms</a></li>
-                        <li><a href="">Settings</a></li>
+                        <li><a v-bind:href="privacyLink">{{privacy}}</a></li>
+                        <li><a v-bind:href="termsLink">{{terms}}</a></li>
+                        <li><a href="">{{settings}}</a></li>
                     </div>
                 </ul>
             </div>
         </footer>
-        <script>
-            function resizeInput() {
-                $(this).attr('size', $(this).val().length);
-            }
-        </script>
+        
     </body>
 </html>
