@@ -14,8 +14,8 @@
     <body>
         <div class="topnav ul-nav" id="topnav">
             <span>
-                <a class='toplink' v-bind:href="homepage">Gmail</a>
-                <a class='toplink' href="">{{images}}</a>
+                <a class='toplink a-links' v-bind:href="homepage">Gmail</a>
+                <a class='toplink a-links' href="">{{images}}</a>
                 <span class="material-icons navicon">apps</span>
                 <button class="button btn-primary">{{login}}</button>
             </span>
@@ -30,16 +30,16 @@
                 <div class="search-bar">
                     <span class="material-icons">search</span>
                     <input class="search-bar-input" type="text" onresize="resizeInput()">
-                    <span class="material-icons">keyboard_alt</span>
-                    <span class="material-icons">mic</span>
+                    <span class="material-icons icons">keyboard_alt</span>
+                    <span class="material-icons icons">mic</span>
                 </div>
 
-                <div >
+                <div class="center-el">
                     <button class="btn-search">{{search}}</button>
                     <button class="btn-search" >{{lucky}}</button>
                 </div>
-                <div>
-                    <span>
+                <div class="center-el">
+                    <span class="lang">
                         {{languages}}: 
                         <a>English</a>
                         <a>magyar</a>
@@ -49,7 +49,6 @@
                 
             </div>
         </div>
-        
 
         <footer class="footer" id="footer">
             <div>
@@ -58,15 +57,15 @@
                 </ul>
                 
                 <ul>
-                    <li><a v-bind:href="aboutLink">{{about}}</a></li>
-                    <li><a v-bind:href="addsLink">{{adds}}</a></li>
-                    <li><a v-bind:href="businessLink">{{business}}</a></li>
-                    <li><a v-bind:href="hswLink">{{hsw}}</a></li>
+                    <li><a class='a-links' v-bind:href="aboutLink">{{about}}</a></li>
+                    <li><a class='a-links' v-bind:href="addsLink">{{adds}}</a></li>
+                    <li><a class='a-links' v-bind:href="businessLink">{{business}}</a></li>
+                    <li><a class='a-links' v-bind:href="hswLink">{{hsw}}</a></li>
 
                     <div style="float: right;">
-                        <li><a v-bind:href="privacyLink">{{privacy}}</a></li>
-                        <li><a v-bind:href="termsLink">{{terms}}</a></li>
-                        <li><a href="">{{settings}}</a></li>
+                        <li><a class='a-links' v-bind:href="privacyLink">{{privacy}}</a></li>
+                        <li><a class='a-links' v-bind:href="termsLink">{{terms}}</a></li>
+                        <li><a class='a-links' href="">{{settings}}</a></li>
                     </div>
                 </ul>
             </div>
